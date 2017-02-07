@@ -1,0 +1,20 @@
+﻿<Window x:Class="Podchody.ShowResults"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Podchody"
+        mc:Ignorable="d"
+        Title="Wyniki" Height="311.932" Width="623.58" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+
+        <Grid x:Name="titleGrid" Height="60" VerticalAlignment="Top">
+            <Label x:Name="label" Content="Pozycja" HorizontalAlignment="Left" Margin="70,20,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+            <Label x:Name="label1" Content="Nazwa drużyny" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+            <Label x:Name="label2" Content="Wynik" HorizontalAlignment="Right" Margin="0,20,80,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        </Grid>
+        <ScrollViewer Margin="0,60,0,0">
+            <Grid x:Name="scoreGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Width="616" Height="227"/>
+        </ScrollViewer>
+    </Grid>
+</Window>

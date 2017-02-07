@@ -1,0 +1,42 @@
+﻿<Window x:Class="Podchody.NewGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Podchody"
+        mc:Ignorable="d"
+        Title="Nowe Podchody" Height="350" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid x:Name="mainGrid">
+            <Grid x:Name="firstPageGrid">
+                <Label x:Name="label4" Content="Informacje ogólne" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+                <Label x:Name="label" Content="Ilość drużyn:" HorizontalAlignment="Left" Margin="70,60,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label1" Content="Ilość zadań specjalnych:" HorizontalAlignment="Left" Margin="70,90,0,0" VerticalAlignment="Top"/>
+                <CheckBox x:Name="ownNameSpecialTaskCheckBox" Content="Własne nazwy zadań specjalnych" HorizontalAlignment="Left" Margin="55,125,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label5" Content="Kary (w minutach)" HorizontalAlignment="Center" Margin="0,155,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                <Label x:Name="label2" Content="za podpowiedź:" HorizontalAlignment="Left" Margin="70,190,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label3" Content="za wskazanie następnego miejsca:" HorizontalAlignment="Left" Margin="70,220,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="numberOfTeamTextBox" HorizontalAlignment="Left" Height="23" Margin="280,64,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="25" MaxLength="2" MaxLines="1" PreviewTextInput="isNumber" PreviewKeyUp="deleteZero" GotFocus="gotFocus" LostFocus="textBoxLostFocus"/>
+                <TextBox x:Name="numberOfSpecialTaskTextBox" HorizontalAlignment="Left" Height="23" Margin="280,94,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="25" MaxLines="1" MaxLength="2" PreviewTextInput="isNumber" PreviewKeyUp="deleteZero" GotFocus="gotFocus" LostFocus="textBoxLostFocus"/>
+                <TextBox x:Name="penaltiesHintTextBox" HorizontalAlignment="Left" Height="23" Margin="280,194,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="25" MaxLines="1" MaxLength="2" PreviewTextInput="isNumber" PreviewKeyUp="deleteZero" GotFocus="gotFocus" LostFocus="textBoxLostFocus"/>
+                <TextBox x:Name="penaltiesNextPlaceTextBox" HorizontalAlignment="Left" Height="23" Margin="280,224,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="25" MaxLength="2" MaxLines="1" PreviewTextInput="isNumber" PreviewKeyUp="deleteZero" GotFocus="gotFocus" LostFocus="textBoxLostFocus"/>
+
+            </Grid>
+            <Grid x:Name="secondPageGrid">
+                <Label x:Name="secondPageLabel" Content="Wpisz nazwy drużyn" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="thirdPageGrid">
+                <Label x:Name="thirdPageLabel" Content="Wpisz własne nazwy zadań specjalnych" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="fourthPageGrid">
+                <Label x:Name="fourthPageLabel" Content="Wpisz bonifikaty za wykonanie zadań specjalnych" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+
+            </Grid>
+        </Grid>
+        <Grid x:Name="buttonGrid" Height="50" VerticalAlignment="Bottom">
+            <Button x:Name="nextButton" Content="Dalej" HorizontalAlignment="Center" Margin="90,0,-90,15" VerticalAlignment="Bottom" Width="75" Click="nextButton_Click"/>
+            <Button x:Name="previouwButton" Content="Wstecz" HorizontalAlignment="Center" Margin="0,0,0,15" VerticalAlignment="Bottom" Width="75" Click="previouwButton_Click"/>
+            <Button x:Name="cancelButton" Content="Anuluj" HorizontalAlignment="Center" Margin="-90,0,90,15" VerticalAlignment="Bottom" Width="75" Click="cancelButton_Click"/>
+        </Grid>
+    </Grid>
+</Window>
